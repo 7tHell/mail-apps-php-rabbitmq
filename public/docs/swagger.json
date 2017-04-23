@@ -1,0 +1,103 @@
+{
+    "swagger": "2.0",
+    "paths": {
+        "/rabbitMq/mail/create": {
+            "post": {
+                "tags": [
+                    "Mail"
+                ],
+                "description": "Create mail",
+                "operationId": "rabbitMq.mail.create",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "from",
+                        "in": "query",
+                        "description": "Token generate from login",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "to",
+                        "in": "query",
+                        "description": "To email address separate with commas for multiple address",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "cc",
+                        "in": "query",
+                        "description": "Cc email address separate with commas for multiple address",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "bcc",
+                        "in": "query",
+                        "description": "Bcc email address separate with commas for multiple address",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "subject",
+                        "in": "query",
+                        "description": "Token generate from login",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "template_view",
+                        "in": "query",
+                        "description": "Token generate from login",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "content",
+                        "in": "query",
+                        "description": "Token generate from login",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "404": {
+                        "description": "Invalid request"
+                    },
+                    "500": {
+                        "description": "Critical error"
+                    }
+                }
+            }
+        },
+        "/rabbitMq/mail/consume": {
+            "get": {
+                "tags": [
+                    "Mail"
+                ],
+                "description": "Consume mail queue",
+                "operationId": "rabbitMq.mail.consume",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "404": {
+                        "description": "Invalid request"
+                    },
+                    "500": {
+                        "description": "Critical error"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {}
+}
