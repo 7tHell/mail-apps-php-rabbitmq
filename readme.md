@@ -1,4 +1,4 @@
-##Mail apps using rabbitMQ
+## Mail apps using rabbitMQ
 
 ## Notes
 You can find on google how to setup rabbitMQ, PHP 7.0+, MYSQL
