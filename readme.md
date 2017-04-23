@@ -23,7 +23,7 @@ php artisan migrate
  ```
  After migrating database you will see template table basically its for reference only
  so that we can remember content needed for each template
-##Features
+## Features
 v1.0.0 :
 - Swagger included you can access it using [SERVER-HOST]/swagger
 - Message will be queue to rabbit MQ
@@ -37,7 +37,7 @@ Next release v2.0.0 :
 - Unit test
 - Integration test
 
-##Create task
+## Create task
 Swagger docs
 ```
 http://[SERVER-HOST]/swagger/#!/Mail/rabbitMq_mail_create
@@ -49,7 +49,7 @@ curl -X POST --header 'Content-Type: application/json' --header 'Accept: applica
 .com&subject=Testing&template_view=Example&content=%7B%22name%22%3A%22World&#33;%22%7D'
 ```
 
-##Request parameter
+## Request parameter
 - from : mail sender please make sure use verified domain
 - to : recipient use comas separator for multiple address ex : a@gmail.com,b.gmail.com
 - cc : cc use comas separator for multiple address ex : a@gmail.com,b.gmail.com
@@ -60,7 +60,7 @@ you can create your own template at /resources/views and put your template there
 - content : content that you will parse at your template_view you can try using 
 "{"name":"Hello"}"
 
-##Consume task
+## Consume task
 Swagger docs
 ```
 http://[SERVER-HOST]/swagger/#!/Mail/rabbitMq_mail_consume
